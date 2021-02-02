@@ -1,0 +1,50 @@
+#homeBanner{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    overflow: hidden;
+    position: relative;
+}
+
+#intro {
+    width: 50%;
+    color: white;
+}
+
+#intro > span {
+    width: 50%;
+    font-size: 1.75em;
+    font-weight: bold;
+}
+
+
+/** Banner animation styling**/
+.bg {
+    animation:slide 3s linear infinite alternate;
+    background-image: linear-gradient(-70deg, var(--gray) 50%, var(--orange) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position: absolute;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:2s;
+}
+
+.bg3 {
+    animation-duration:2s;
+}
+
+@keyframes slide {
+    0% {
+        transform:translateX(-25%);
+    }
+    100% {
+        transform:translateX(25%);
+    }
+}

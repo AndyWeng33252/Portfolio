@@ -1,0 +1,112 @@
+#about {
+    color: var(--gray);
+}
+
+.title {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: var(--gray);
+}
+
+#iconIMG {
+    font-size: 5vw;
+    color: var(--orange);
+}
+
+.item {
+    width: 20%;
+    margin: 0px 10px;
+    text-align: center;
+}
+
+i {
+    margin: auto 150px;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+/********************* SKILLS ***************************/
+
+.verticalLine {
+    margin-top: 10%;
+    border-left: 6px solid var(--gray);
+    height: 600px;
+}
+
+/** A column flexbox for all the skills**/
+.skillsWeb {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 100px 50px;
+    text-align: start;
+    width: 50%;
+}
+
+/** The whole bar is a flex box with
+    flex-direction row. **/
+.bar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 2px 0;
+    border-radius: 15px;
+}
+
+/** bar-back is the gray bar behind the orange**/
+.bar-back {
+    width: 100%;
+    height: 100%;
+    margin: 10px 0px;
+    padding: 5px;
+    background-color: var(--gray);
+    position: relative;
+    color: white;
+    text-align: right;
+    border-radius: 10px;
+}
+
+/** The orange portion of the skills bar to indicate
+    percentage of mastery **/
+.shade {
+    background-color: var(--orange);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.skillSection h3 {
+    margin-top: 10px;
+}
+
+.bar > h5 {
+    width: 30%;
+    text-align: center;
+}
+
+.percent {
+    position:absolute;
+    top:25%;
+    right: 5px;
+}
+
+.skillSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.skillsGrid {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.hidden{
+    visibility: hidden;
+}

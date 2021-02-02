@@ -1,0 +1,30 @@
+a {
+    display: inline;
+    margin: 50px;
+    text-decoration: none;
+}
+
+a:visited{
+color: white;
+}
+
+a:hover {
+    color: var(--orange);
+}
+
+ul {
+    margin: auto;
+    background-color: var(--gray);
+    height: 5%;
+    text-align: center;
+    line-height: 60px;
+    border-bottom: 3px solid var(--orange);
+    color: white;
+    text-transform: uppercase;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    font-size: 1.2em;
+    min-height: 60px;
+    z-index: 100;
+}
