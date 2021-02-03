@@ -62,7 +62,7 @@ export const webBackend =[
         percentage: "80%",
     },
     {
-        label: "REST APIs",
+        label: "REST API",
         percentage: "90%",
     },
 ]

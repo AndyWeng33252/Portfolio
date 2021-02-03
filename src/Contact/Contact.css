@@ -1,0 +1,38 @@
+.contactGrid {
+    display: grid;
+    grid-template-rows: 5fr;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+}
+
+.form {
+    font-size: 1.5em;
+    margin-bottom: 150px;
+    visibility: hidden;
+}
+
+label {
+    display: block;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.input {
+    background-color: var(--color1);
+    width: 400px;
+    height: 25px;
+    font-size: .75em;
+    color: white;
+}
+
+.message {
+    height: 100px;
+}
+
+.socialIcons {
+    height: 200px;
+    width: 100vw;
+    background-color: var(--backgroundDark);
+    text-align: center;
+}

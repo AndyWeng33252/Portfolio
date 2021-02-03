@@ -18,29 +18,36 @@ const About = () => {
 
     return (<section id="about" className="container flex-col">
         <h1 className="title">About</h1>
-        <div className="flex-row container">
-            {items.map((item)=>{
-                return <Item {...item}/>
-            })}
+        <div className="about-flex-container container">
+            <div className="about-flex1"> 
+                <Item {...items[0]}/>
+                <Item {...items[1]}/>
+            </div>
+            <div className="about-flex2"> 
+                <Item {...items[2]}/>
+                <Item {...items[3]}/>
+            </div>
         </div>
-        <i>"Work like hell. If other people are putting in 40 hour workweeeks and you're putting in 100, you will achieve in 4 months what it takes them in a year to achieve"</i>
-        <h5>Elon Musk</h5>
+        <i className="quote">"Work like hell. If other people are putting in 40 hour workweeeks and you're putting in 100, you will achieve in 4 months what it takes them in a year to achieve"</i>
+        <h3>Elon Musk</h3>
         <div className="skillSection">
             <div className="skillsWeb">
-                <h1 className="center">WEB</h1>
-                <h3>Frontend</h3>
+                <h1 className="section-title">WEB</h1>
+                <h2>Frontend</h2>
                 {webFrontend.map((skill) => {
                     return <Bar {...skill}/>
                 })}
-                <h3 style={{marginTop: "10px"}}>Backend</h3>
+                <h2 style={{marginTop: "10px"}}>Backend</h2>
                 {webBackend.map((skill) => {
                     return <Bar {...skill}/>
                 })}
-                <h3 className="center">Others</h3>
-                <span className="fas fa-arrow-down center" 
-                        onClick={() => toggle()}>
-                </span>
-                <div className="skillsGrid hidden" ref={refContainer}>
+                <div onClick={() => toggle()}> 
+                    <h2 className="center">Others</h2>
+                    <div className="fas fa-arrow-down center arrow"
+                            style={{display:"block"}}>
+                    </div> 
+                </div>
+                <div className="frameworksGrid hidden border" ref={refContainer}>
                     <h5>Amazon EC2</h5>
                     <h5>Amazon RDS</h5>
                     <h5>GitHub</h5>
@@ -53,18 +60,18 @@ const About = () => {
             </div>
             <div className="verticalLine"></div>
             <div className="skillsWeb">
-                <h1 className="center">MOBILE</h1>
-                <h3>Frontend</h3>
+                <h1 className="section-title">MOBILE</h1>
+                <h2>Frontend</h2>
                 {mobileFrontend.map((skill) => {
                     return <Bar {...skill}/>
                 })}
-                <h3 style={{marginTop: "10px"}}>Backend</h3>
+                <h2 style={{marginTop: "10px"}}>Backend</h2>
                 {mobileBackend.map((skill) => {
                     return <Bar {...skill}/>
                 })}
                 <br></br>
-                <h3 className="center">Frameworks</h3>
-                <div className="skillsGrid">
+                <h2 className="center">Frameworks</h2>
+                <div className="frameworksGrid">
                     <h5>MapKit</h5>
                     <h5>ARKit</h5>
                     <h5>SceneKit</h5>
@@ -84,15 +91,15 @@ const Item = ({icon, title, description}) => {
     return(
     <div className="item">
         <p id="iconIMG" className={icon}></p>        
-        <h4>{title}</h4>
-        <p style={{fontSize:"14px"}}>{description}</p>
+        <h2>{title}</h2>
+        <p className="description">{description}</p>
     </div>)
 }
 
 const Bar = ({label, percentage}) => {
     return (
-    <div className="bar border">
-        <h5>{label}</h5>
+    <div className="bar">
+        <h3>{label}</h3>
         <div className="bar-back"> 
             <div className="shade" style={{width:percentage}}>
             </div>

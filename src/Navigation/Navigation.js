@@ -6,8 +6,8 @@ const Navigation = () => {
         <ul>
             <a href='#homeBanner'>Home</a>
             <a href='#about'>About</a>
-            <a href='#about'>Portfolio</a>
-            <a href='#about'>Contacts</a>
+            <a href='#portfolio'>Portfolio</a>
+            <a href='#contact'>Contacts</a>
         </ul>
     </>)
 }

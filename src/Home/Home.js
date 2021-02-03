@@ -8,10 +8,10 @@ const Home = () => {
             <div class="bg bg2"></div>
             <div class="bg bg3"></div>
             <h1 id="intro"> Hi I'm 
-                <span> Andy Weng</span>. 
+                <span> Andy Weng.</span> 
                 <div>I'm a full-stack web and IOS mobile developer.</div>
             </h1>
-            <a id="button" href="#about">View More</a>
+            <a className="button" href="#about">View More</a>
         </div>
     )
 }

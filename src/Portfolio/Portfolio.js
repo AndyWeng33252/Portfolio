@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import './Portfolio.css'
 
 const Portfolio = () => {
-    return(<div>
+    return(<div id="portfolio" style={{backgroundColor:"var(--backgroundDark)", paddingBottom:"100px",paddingTop:"25px"}}>
         <h1 className="title">Portfolio</h1>
         <div className="flex-row"> 
             <Project/>
@@ -26,13 +26,13 @@ const Project = () => {
             demoRef.current.style.visibility = "hidden"
             aboutRef.current.style.visibility = "visible"
             aboutTabRef.current.style.backgroundColor = "rgb(4, 102, 81)"
-            demoTabRef.current.style.backgroundColor = "var(--orange)"
+            demoTabRef.current.style.backgroundColor = "var(--color2)"
         }
         else {
             demoRef.current.style.visibility = "visible"
             aboutRef.current.style.visibility = "hidden"
             demoTabRef.current.style.backgroundColor = "rgb(4, 102, 81)"
-            aboutTabRef.current.style.backgroundColor = "var(--orange)"
+            aboutTabRef.current.style.backgroundColor = "var(--color2)"
         }
     }
 

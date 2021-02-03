@@ -1,19 +1,19 @@
 :root {
-  --gray: rgb(12, 88, 107);
-  --orange: rgb(47, 189, 111);
+  --color1: rgb(12, 88, 107);
+  --color2: rgb(47, 189, 111);
+  --text: rgb(41, 41, 41);
+  --backgroundDark: rgb(233, 233, 233);
 }
 
 .border {
-  border: 1px solid black
+  border: 1px solid var(--color1)
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Markazi Text', serif;;
-  color: rgb(41, 41, 41);
-  font-size: 18px;
+  font-family: 'Markazi Text', serif;
 }
 
 .center {
@@ -46,15 +46,114 @@
   justify-content: flex-start;
 }
 
-#button {
+.button {
   padding:7px;
-  background-color: var(--orange);
+  background-color: var(--color2);
   color:white;
   font-weight: bold;
   border: 2px solid rgb(0,0,0);
   font-size: 1em;
 }
 
-#button:hover {
+.button:hover {
   opacity: .5;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+@keyframes slideInLeft{
+  0% {
+      opacity: 0;
+      transform: translateX(-300px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+      visibility: visible;
+  }
+}
+
+@keyframes slideInRight{
+  0% {
+      opacity: 0;
+      transform: translateX(300px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+      visibility: visible;
+  }
+}
+
+@keyframes slideInUp{
+  0% {
+      opacity: 0;
+      transform: translateY(300px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+  }
+}
+
+@keyframes scaleIn{
+  0% {
+      opacity: 0;
+      transform: scaleX(0);
+  }
+  100% {
+      opacity: 1;
+      transform: scaleX(1);
+  }
+}
+
+.slide-in-left {
+    animation: 0.75s ease both;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-name: slideInLeft;
+}
+
+.slide-in-right {
+    animation: 0.75s ease both;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-name: slideInRight;
+}
+
+.slide-in-up {
+    animation: 0.75s ease both;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-name: slideInUp;
+}
+
+.scale-in {
+    animation: 0.75s ease both;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-name: scaleIn;
 }
