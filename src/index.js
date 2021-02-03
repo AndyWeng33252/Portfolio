@@ -11,10 +11,8 @@ ReactDOM.render(
 
 const observerCallback = (entries, observer) => {
   for (const { target, isIntersecting } of entries) {
-    console.log(target.classList)
     if (isIntersecting) {
       let type = target.classList[0]
-      console.log(type)
       if (type === 'about-flex1') {
           target.classList.add('slide-in-left')
       }

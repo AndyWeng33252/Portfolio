@@ -35,11 +35,11 @@ const About = () => {
                 <h1 className="section-title">WEB</h1>
                 <h2>Frontend</h2>
                 {webFrontend.map((skill) => {
-                    return <Bar {...skill}/>
+                    return <Bar {...skill} key={skill.label}/>
                 })}
                 <h2 style={{marginTop: "10px"}}>Backend</h2>
                 {webBackend.map((skill) => {
-                    return <Bar {...skill}/>
+                    return <Bar {...skill} key={skill.label}/>
                 })}
                 <div onClick={() => toggle()}> 
                     <h2 className="center">Others</h2>
@@ -63,11 +63,11 @@ const About = () => {
                 <h1 className="section-title">MOBILE</h1>
                 <h2>Frontend</h2>
                 {mobileFrontend.map((skill) => {
-                    return <Bar {...skill}/>
+                    return <Bar {...skill} key={skill.label}/>
                 })}
                 <h2 style={{marginTop: "10px"}}>Backend</h2>
                 {mobileBackend.map((skill) => {
-                    return <Bar {...skill}/>
+                    return <Bar {...skill} key={skill.label}/>
                 })}
                 <br></br>
                 <h2 className="center">Frameworks</h2>

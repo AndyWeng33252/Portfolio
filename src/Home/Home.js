@@ -4,9 +4,9 @@ import './Home.css'
 const Home = () => {
     return (
         <div id="homeBanner" className="fullScreen">
-            <div class="bg"></div>
-            <div class="bg bg2"></div>
-            <div class="bg bg3"></div>
+            <div className="bg"></div>
+            <div className="bg bg2"></div>
+            <div className="bg bg3"></div>
             <h1 id="intro"> Hi I'm 
                 <span> Andy Weng.</span> 
                 <div>I'm a full-stack web and IOS mobile developer.</div>
