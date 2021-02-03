@@ -25,24 +25,25 @@ const Contact = () => {
     return (<section id="contact" className="contactGrid">
         <h1 className="title">Contacts</h1>
         <form
-            onSubmit={() => submitForm()}
+            onSubmit={submitForm}
             action="https://formspree.io/f/mknpejgz"
             method="POST"
             className="form">
 
             <div>
                 <label>Email:</label>
-                <input type="email" name="email"
+                <input type="email" name="email" required
                 className="input"/>
             </div>
 
             <div>
                 <label>Message:</label>
-                <textarea type="text" name="message"
+                <textarea type="text" name="message" required
                 className="input message"/>
             </div>
 
-            {success === "SUCCESS" ? <p>Thanks!</p> : <button className="button">Submit</button>}
+            <button className="button">Submit</button>
+            {success === "SUCCESS" ? <p>Thanks!</p> : null}
             {success === "ERROR" && <p>Ooops! There was an error.</p>}
 
         </form>

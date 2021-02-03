@@ -40,7 +40,7 @@ const observerCallback = (entries, observer) => {
 const observer = new IntersectionObserver(observerCallback, {
   root: null,
   rootMargin: '0px',
-  threshold: 0.3
+  threshold: 0.6
 });
 
 const aboutAnimation1 = document.querySelector('.about-flex1');
