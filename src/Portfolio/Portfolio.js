@@ -32,10 +32,10 @@ const Project = ({title, demoLink, websiteLink, repoLink, description, image, vi
         <div id="projectAbout" 
                 className="tab">About
         </div>
-        {demoLink &&<div id="projectDemo" 
-                className="tab">Demo</div>}
-        {websiteLink && <div id="projectSite" className="tab">Website</div>}
-        <div id="projectRepo" className="tab">Repo</div>
+        {demoLink && <div id="projectDemo" 
+                className="tab" onClick={()=>window.open(demoLink, '_blank')}>Demo</div>}
+        {websiteLink && <div id="projectSite" className="tab" onClick={()=>window.open(websiteLink, '_blank')}>Website</div>}
+        <div id="projectRepo" className="tab" onClick={()=>window.open(repoLink, '_blank')}>Repo</div>
 
         <div id="infoSection" className="border">
             <div className="projectBackground" style={{backgroundImage:'url("'+image+'")'}}>

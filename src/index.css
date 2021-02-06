@@ -59,6 +59,10 @@
   background-color: rgb(4, 102, 81);
 }
 
+.button:hover {
+  opacity: .7;
+}
+
 .hidden{
     visibility: hidden;
 }
