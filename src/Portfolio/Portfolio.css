@@ -1,11 +1,18 @@
 .projectGrid {
-    height: 200px;
+    height: 250px;
     margin: 20px;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1f 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 62.5px);
     text-align: center;
     visibility: hidden;
+}
+
+.categoryTab {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 #infoSection {
@@ -24,21 +31,6 @@
     background-color:rgb(4, 102, 81);
 }
 
-#projectDemo {
-    grid-column: 1/2;
-    grid-row: 2/3;
-}
-
-#projectSite {
-    grid-column: 1/2;
-    grid-row: 3/4;
-}
-
-#projectRepo {
-    grid-column: 1/2;
-    grid-row: 4;
-}
-
 .tab {
     background-color: var(--color2);
     color: white;
@@ -52,9 +44,24 @@
     background-color: rgb(4, 102, 81);
 }
 
-.demoPage {
+.projectBackground {
+    z-index: 100;
     position: absolute;
-    top: 6px;
-    text-align: center;
-    visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: opacity 1s ease;
+    box-shadow: 15px 10px 10px #888888;
+    font-size: 2em;
+    color:white
+}
+
+.projectBackground h6 {
+    background-color: black;
+}
+
+#infoSection:hover .projectBackground{
+    opacity: 0;
 }

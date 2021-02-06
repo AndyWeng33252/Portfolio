@@ -1,63 +1,49 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './Portfolio.css'
+import {projects} from './data'
 
 const Portfolio = () => {
+    const [category, setCategory] = useState(["web", "mobile", "other"])
+    const [visible, setVisible] = useState(false)
     return(<div id="portfolio" style={{backgroundColor:"var(--backgroundDark)", paddingBottom:"100px",paddingTop:"25px"}}>
         <h1 className="title">Portfolio</h1>
+        <div className="categoryTab"> 
+            <button className="button" onClick={() => {setCategory(["web", "mobile", "other"])
+                setVisible(true)}}> All </button>
+            <button className="button" onClick={()=>{setCategory(["web"])
+                setVisible(true)
+            }}> Web </button>
+            <button className="button" onClick={()=>{setCategory(["mobile"])
+                setVisible(true)}}> Mobile </button>
+            <button className="button" onClick={()=>{setCategory(["other"])
+                setVisible(true)}}> Other</button>
+        </div>
         <div className="flex-row"> 
-            <Project/>
-            <Project/>
-            <Project/>
-            <Project/>
+            {projects.filter((project)=> {return category.includes(project.type)
+            }).map((project) => <Project {...project} visibility={visible}/>)}
         </div>
     </div>
 
     )
 }
 
-const Project = () => {
-    const aboutRef = useRef(null)
-    const demoRef = useRef(null)
-    const aboutTabRef = useRef(null)
-    const demoTabRef = useRef(null)
-
-    const toggle= (string) => {
-        if (string === "about"){
-            demoRef.current.style.visibility = "hidden"
-            aboutRef.current.style.visibility = "visible"
-            aboutTabRef.current.style.backgroundColor = "rgb(4, 102, 81)"
-            demoTabRef.current.style.backgroundColor = "var(--color2)"
-        }
-        else {
-            demoRef.current.style.visibility = "visible"
-            aboutRef.current.style.visibility = "hidden"
-            demoTabRef.current.style.backgroundColor = "rgb(4, 102, 81)"
-            aboutTabRef.current.style.backgroundColor = "var(--color2)"
-        }
-    }
-
-    return ( <div className="projectGrid">
+const Project = ({title, demoLink, websiteLink, repoLink, description, image, visibility}) => {
+    return ( <div className="projectGrid" style={{visibility: visibility && "visible"}}>
         <div id="projectAbout" 
-                className="tab" 
-                onClick={()=>toggle("about")}
-                ref={aboutTabRef}>About
+                className="tab">About
         </div>
-        <div id="projectDemo" 
-                className="tab" 
-                onClick={()=>toggle("demo")}
-                ref={demoTabRef}>Demo</div>
-        <div id="projectSite" className="tab">Website</div>
+        {demoLink &&<div id="projectDemo" 
+                className="tab">Demo</div>}
+        {websiteLink && <div id="projectSite" className="tab">Website</div>}
         <div id="projectRepo" className="tab">Repo</div>
 
         <div id="infoSection" className="border">
-            <section className="aboutPage" ref={aboutRef}>
-                <h1 style={{color:"white"}}>Title</h1>
-                <p style={{color:"white"}}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien ultricies, consectetur magna dignissim, porttitor augue. Curabitur sollicitudin iaculis.
-                </p>
-            </section>
-            <section className="demoPage" ref={demoRef}>
-                <h1 style={{color:"white"}}>Title</h1>
-                <p style={{color:"white"}}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien ultricies, consectetur magna dignissim, porttitor augue. Curabitur sollicitudin iaculis.
+            <div className="projectBackground" style={{backgroundImage:'url("'+image+'")'}}>
+                <h6>{title}</h6>
+            </div>
+            <section className="aboutPage">
+                <h1 style={{color:"white"}}>{title}</h1>
+                <p style={{color:"white"}}> {description}
                 </p>
             </section>
         </div>

@@ -55,8 +55,8 @@
   font-size: 1em;
 }
 
-.button:hover {
-  opacity: .5;
+.button:focus {
+  background-color: rgb(4, 102, 81);
 }
 
 .hidden{
