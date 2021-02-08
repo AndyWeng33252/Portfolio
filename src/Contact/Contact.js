@@ -49,7 +49,8 @@ const Contact = () => {
         </form>
 
         <div className="socialIcons">
-            ICONS
+            <a class="fab fa-github" onClick={()=>window.open('https://github.com/AndyWeng33252', '_blank')}></a>
+            <a class="fab fa-linkedin" onClick={()=>window.open('https://www.linkedin.com/in/andy-weng-309517183', '_blank')}></a>
         </div>
     </section>
     );

@@ -31,6 +31,9 @@ label {
 }
 
 .socialIcons {
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
     height: 200px;
     width: 100vw;
     background-color: var(--backgroundDark);

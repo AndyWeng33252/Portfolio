@@ -7,7 +7,7 @@ export const items = [
     {
         icon: "fas fa-book-open",
         title: "Fast Learner",
-        description: "I'm a fast, self-motivated learner who learns to fill my thirst to discover how things work." 
+        description: "I'm a fast, self-motivated learner who learns to fill my desire to discover how things work." 
     },
     {
         icon: "fas fa-users",
