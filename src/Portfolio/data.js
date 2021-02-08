@@ -14,7 +14,7 @@ export const projects = [
         type: "web",
         description: "The website you are currently on right now. This portfolio was built with React JS and contains advanced CSS concepts such as flexbox, CSS grid, animations and transitions.",
         demoLink: null,
-        websiteLink: null,
+        websiteLink: 'http://www.findandyweng.us/',
         repoLink: "https://github.com/AndyWeng33252/Portfolio",
         image: "/portfolio.png"
     },

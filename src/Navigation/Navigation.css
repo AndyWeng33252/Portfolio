@@ -15,8 +15,7 @@ a:visited {
 a:hover {
     color: var(--color2);
 }
-
-ul {
+.nav {
     background-color: var(--color1);
     text-align: center;
     line-height: 60px;
@@ -29,12 +28,30 @@ ul {
     font-size: 1.5em;
     min-height: 60px;
     z-index: 1000;
+    display: block;
 }
 
-@media screen and (max-width: 822px) {
-    a {
+.shortNav {
+    display: none;
+    line-height: 60px;
+}
+
+@media screen and (max-width: 702px) {
+    ul a {
         display: block;
         margin: 0px;
         text-decoration: none;
+    }
+
+    #longNav {
+        display: none;
+    }
+
+    #longNavBar {
+        display: none;
+    }
+
+    .shortNav {
+        display: block;
     }
 }
