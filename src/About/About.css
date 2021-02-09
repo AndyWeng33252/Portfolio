@@ -101,6 +101,28 @@ i {
     margin-top: 100px;
 }
 
+.section-title {
+    position: relative;
+}
+
+.section-title span{
+    color:black;
+    font-size: .75em;
+}
+
+.section-title span:hover {
+    color: var(--color2)
+}
+
+.resumebtn {
+    padding: 3px;
+    font-size: .7em;
+    margin-left: 10px;
+    line-height: 10px;
+    position: absolute;
+    top: 10px
+}
+
 /** A column flexbox for all the skills**/
 .skillsWeb {
     display: flex;

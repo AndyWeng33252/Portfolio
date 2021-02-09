@@ -32,7 +32,9 @@ const About = () => {
         <h3>Elon Musk</h3>
         <div className="skillSection">
             <div className="skillsWeb">
-                <h1 className="section-title">WEB</h1>
+                <h1 className="section-title">WEB 
+                    <button class="button resumebtn" onClick={() => {window.open('AndyWengResumeSWE.pdf')}}>  Resume</button>
+                </h1>
                 <h2>Frontend</h2>
                 {webFrontend.map((skill) => {
                     return <Bar {...skill} key={skill.label}/>
@@ -60,7 +62,8 @@ const About = () => {
             </div>
             <div className="verticalLine"></div>
             <div className="skillsWeb">
-                <h1 className="section-title">MOBILE</h1>
+                <h1 className="section-title">MOBILE            <button class="button resumebtn" onClick={() => {window.open('AndyWengResumeMobile.pdf')}}>Resume</button>
+                </h1>
                 <h2>Frontend</h2>
                 {mobileFrontend.map((skill) => {
                     return <Bar {...skill} key={skill.label}/>
